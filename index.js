@@ -1,1 +1,1 @@
-export { setup } from "./src/api/index.js";
+export { startServer, getCredentials } from "./src/api/server.js";
