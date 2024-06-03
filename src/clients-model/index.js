@@ -5,7 +5,6 @@ import Endpoint from "./client/Endpoint.js";
 
 class ClientModel {
   constructor() {
-    console.log("Creating new client model");
     this.clientGroups = new ClientGroups();
     this.connections = new Connections(this.clientGroups);
   }
