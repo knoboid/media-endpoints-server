@@ -1,46 +1,28 @@
 {
-  "name": "media-endpoints-server",
-  "version": "1.0.0",
-  "description": "Project checking for WebRTC GitHub samples repo",
+  "name": "@media-endpoints/server",
+  "version": "0.0.1",
+  "description": "A NodeJS server for the Media Endpoints project",
   "type": "module",
   "keywords": [
     "webrtc",
-    "demos",
-    "samples",
     "javascript"
   ],
-  "homepage": "https://github.com/webrtc/samples",
-  "bugs": {
-    "url": "https://github.com/webrtc/samples/issues"
-  },
-  "license": "BSD-3-Clause",
-  "author": "The WebRTC project authors",
+  "license": "GPL3",
+  "author": "Mark Bingley",
   "repository": {
     "type": "git",
-    "url": "https://github.com/webrtc/samples.git"
+    "url": "https://github.com/knoboid/media-endpoints-server.git"
   },
   "scripts": {
-    "start": "nodemon src/server.js",
-    "test": "npm run eslint && npm run stylelint",
-    "eslint": "eslint 'test/**.js' 'src/content/**/*.js'",
-    "jest": "jest --watchAll",
-    "stylelint": "stylelint 'src/**/*.css'"
+    "jest": "jest --watchAll"
   },
-  "eslintIgnore": [
-    "'**/third_party/*.js'"
-  ],
   "devDependencies": {
     "@babel/preset-env": "^7.24.5",
     "babel-jest": "^29.7.0",
-    "eslint": "^8.9.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-jest": "^27.4.0",
-    "jest": "^29.7.0",
-    "nodemon": "^3.1.0",
-    "stylelint": "^14.5.3",
-    "stylelint-config-recommended": "^7.0.0"
+    "jest": "^29.7.0"
   },
   "dependencies": {
+    "@media-endpoints/signalling": "^0.0.1",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "ws": "^8.17.0"

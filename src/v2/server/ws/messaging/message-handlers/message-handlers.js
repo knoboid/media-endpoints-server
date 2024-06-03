@@ -1,4 +1,4 @@
-import { processMessages } from "../../../../client-server-messaging/message-processing.js";
+import { processMessages } from "@media-endpoints/signalling";
 
 const { serverMessagingManager } = processMessages();
 
