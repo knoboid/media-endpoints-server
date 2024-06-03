@@ -1,7 +1,7 @@
 import https from "https";
 import express from "express";
 import { wsServer } from "./ws/ws-server.js";
-import { getCredentials } from "./security/https-credentials.js";
+import { devServerOptions } from "./security/https-credentials.js";
 
 function getDefaultsFromServerConfig(serverConfig) {
   if (typeof serverConfig === "undefined") {
@@ -11,7 +11,21 @@ function getDefaultsFromServerConfig(serverConfig) {
     serverConfig.serverRoot = "./public";
   }
   if (typeof serverConfig.serverOptions === "undefined") {
-    serverConfig.serverOptions = getCredentials();
+    serverConfig.serverOptions = devServerOptions;
+    const warning = `================================================================
+================================================================
+WARNING !
+
+Your HTTPS certificate is current being provided by the
+devServerOptions object.
+
+This is not suitable for production. Use a certificate issued 
+by a suitable authority.
+
+This warning is comimg from the @media-endpoints/server package.
+================================================================
+================================================================`;
+    console.warn(warning);
   }
   return serverConfig;
 }

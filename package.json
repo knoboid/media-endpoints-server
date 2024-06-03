@@ -1,8 +1,9 @@
 {
   "name": "@media-endpoints/server",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A NodeJS server for the Media Endpoints project",
   "type": "module",
+  "main": "index.js",
   "keywords": [
     "webrtc",
     "javascript"
@@ -22,7 +23,7 @@
     "jest": "^29.7.0"
   },
   "dependencies": {
-    "@media-endpoints/signalling": "^0.0.1",
+    "@media-endpoints/signalling": "^0.0.2",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "ws": "^8.17.0"

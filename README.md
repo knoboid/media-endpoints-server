@@ -1,6 +1,6 @@
-# Media Endpoints Signalling
+# Media Endpoints Server
 
-A repository that provides signalling dialogues that are used between media-endpoints clients and server.
+A repository that provides a server for media-endpoints.
 
 
 # About the Media Endpoints project
